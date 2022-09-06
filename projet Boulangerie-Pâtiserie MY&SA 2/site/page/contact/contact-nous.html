@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Contacter-nous | My & Sa</title>
+	<link rel="stylesheet" type="text/css" href="conctact-nous.css">
+	<link rel="stylesheet" type="text/css" href="../nav.css">
+
+    
+</head>
+<body>
+
+    <nav class="nav">
+        <h1>My & Sa</h1>
+        <div class="naviguation">
+            <a href="../../index.html">Acceuil</a>
+            <a href="../../index.html#corps">Les Vedettes</a>
+            <a href="../../index.html#all-plats">Nos Créations</a>
+            <a href="../menu/produit.html">Nos produits</a>
+            <a href="#contenant">Contact</a>
+        </div>
+    </nav>
+
+
+
+<div class="contenant" id="contenant">
+  <img src="https://www.boulangerie-patisserie-saccas.fr/userfiles/10718/refonte/BOULANGERIE%20SACCAS-bandeau01.jpg" alt="image">
+  <div class="texte_centrer"><u><br> <h3>Contactez-nous !</h3></u></div>
+</div>
+</head>
+<body>
+		<form method="post" class="Entrer" name="Verifier" onsubmit="return validation()">
+			<input type="text" name="Nom" placeholder="Entrer votre Nom" required>
+			<input type="text" name="Prénom" placeholder="Entrer votre Prénom" required>
+			<input type="text" name="Num" placeholder="Entrer votre Numéros" required>
+			<input type="text" name="Email" placeholder="Entrer votre Email" required>
+			<textarea name="message" placeholder="Entrer votre message" required></textarea><br>
+			<button id="btnPopup" class="btnPopup"> Envoyer</button>
+</form></div></div>
+	</section><br><br><br>
+
+<!-------------------------------popup---------------------->
+<div id="overlay" class="overlay">
+	<div id="popup" class="popup">
+		<div class="contenu">
+			<span id="btnClose" class="btnClose">&times;</span>
+			<h2>
+				MERCI!!
+			</h2>
+			<div>
+				nous avons bien pris en compte votre message!!<br><br>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!-- --------------LIEN JS----------------- -->
+<script type="text/javascript" language="javascript">
+function validation(){
+var z = document.forms["Verifier"]["Email"].value;
+var x = document.forms["Verifier"]["Num"].value;
+
+
+var idxAlt =z.indexOf('@')
+var idxPt = z.indexOf('.',idxAlt+1)
+	if (idxAlt<0||z.lenght<idxPt+1||idxPt<idxAlt+1){
+		alert("mail n'est pas valide");}
+	if(isNaN(x) || 10!=x.length){
+		alert("numero n'est pas valide");
+	}
+
+while((idxAlt>0||z.lenght>idxPt+1||idxPt>idxAlt+1)&&(isNaN(x)==false || 10==x.length)){
+		var btnPopup = document.getElementById('btnPopup');
+		var overlay = document.getElementById('overlay');
+		btnPopup.addEventListener('click',openMoadl);
+		btnClose.addEventListener('click',closePopup);
+		function openMoadl() {
+		overlay.style.display='block';
+		}
+		function closePopup(){
+			overlay.style.display='none';
+		}
+ break;
+}
+
+
+
+	return false;
+		}
+
+
+
+</script>
+
+
+<!---------------------BAS DE PAGE---------------------------->
+
+    <footer id="contact">
+
+        <div class="contenu-footer">
+            <div class="bloc footer-services">
+                <h3>My & Sa</h3>
+                <img src="../../img/mysa.jpg" alt="logo entreprise" class="logo">
+            </div>
+            <div class="bloc footer-contact">
+                <h3>Restons en contact</h3>
+                <p>55-55-55-55-55</p>
+                <p>supportclient@contact.com</p>
+                <p>6 rue de l'invention, Paris VII, 75007</p>
+            </div>
+            <div class="bloc footer-horaires">
+                <h3>Les Horaires</h3>
+                <ul class="liste-horaires">
+                    <li>❌ Lun Fermé</li>
+                    <li>❌ Mar Fermé</a></li>
+                    <li>✔️ Mer 10h-19h</a></li>
+                    <li>✔️ Jeu 10h-19h</a></li>
+                    <li>✔️ Ven 15h-20h</a></li>
+                    <li>✔️ Sam 13h-21h</li>
+                    <li>✔️ Dim 13h-21h</li>
+                </ul>
+            </div>
+            <div class="bloc footer-medias">
+                <h3>Nos Réseaux</h3>
+                <ul class="liste-medias">
+                    <li><a href="#"><img  src="../../img/logo1.jpg"/>   Instagram/My&Sa</a></li>
+                    <li><a href="#"><img  src="../../img/logo2.jpg"/>    What'sApp/services</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+            
+    </footer>
+
+
+</body>
+</html>
